@@ -76,12 +76,15 @@ export default {
 
 <style scoped>
 
+* {
+  font-family: 'Futura book';
+}
+
 .post {
   width: 375px;
 }
 
 .article_title {
-  width: 335px;
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -149,6 +152,7 @@ export default {
   }
   .article_title {
     font-size: 42px;
+    margin: 60px auto 40px;
   }
   .article_content {
     font-size: 18px;
