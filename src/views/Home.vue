@@ -4,12 +4,6 @@
       <article class="media">
         <figure>
           <img
-            v-if="post.image"
-            :src="post.image"
-            alt=""
-          >
-          <img
-            v-else
             src="http://via.placeholder.com/250x250"
             alt=""
           >
