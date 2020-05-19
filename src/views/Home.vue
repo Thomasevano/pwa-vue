@@ -100,16 +100,6 @@ export default {
     margin: auto;
   }
 
-  @media (min-width: 600px) { 
-    .home {
-      margin: 40px auto;
-    }
-    
-    .first-article-img {
-      height: 500px;
-    }
-  }
-
   .first-article-img {
     display: flex;
     height: 300px;
@@ -215,14 +205,6 @@ export default {
     width: 100vw;
   }
 
-  @media (min-width: 600px) { 
-    .article {
-      position: relative;
-      width: calc(100%/2 - 5px);
-      margin-bottom: 10px;
-    }
-  }
-
   .gradient-overlay {
     height: 100%;
     width: 100%;
@@ -294,6 +276,22 @@ export default {
   .article .button {
     background: #FFFFFF;
     color: #000000;
+  }
+
+  @media (min-width: 600px) { 
+    .home {
+      margin: 40px auto;
+    }
+    
+    .first-article-img {
+      height: 500px;
+    }
+
+    .article {
+      position: relative;
+      width: calc(100%/2 - 5px);
+      margin-bottom: 10px;
+    }
   }
 
 </style>
