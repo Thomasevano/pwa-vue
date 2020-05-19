@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="newsletter">
-      <h2>Plus de Neostreet</h2>
+      <h2>Plus de Neostreet ?</h2>
       <p>Inscrivez-vous à la newsletter</p>
       <a href="">S'inscrire</a>
     </div>
@@ -28,17 +28,29 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  margin-top: 40px;
+}
+
 .newsletter {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   font-family: 'Futura book';
+  margin-bottom: 20px;
 }
 
 .newsletter h2 {
-  font-size: 42px;
-  color:black;
   font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 a {
@@ -48,14 +60,16 @@ a {
 
 .footer {
   font-family: 'Futura book';
-  margin-top: 32px;
   background-color: black;
   color:white;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.footer img {
+  margin-bottom: 20px;
 }
 
 .footer__link {
@@ -64,6 +78,7 @@ a {
   font-weight: bold;
   font-size: 14px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .footer__copyright p {
@@ -75,16 +90,6 @@ a {
    font-size: 16px;
    width: 30%;
  }
-}
-
-@media(min-width: 1366px) {
-  .newsletter {
-    margin-left: 183px;
-  }
-
-  .newsletter h2 {
-    font-size: 42px;
-  }
 }
 
 </style>
