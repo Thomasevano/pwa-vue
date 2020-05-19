@@ -1,7 +1,32 @@
 @font-face {
   font-family: 'Heaters';
-  src: url('Heaters.woff2') format('woff2'),
-      url('Heaters.woff') format('woff');
+  src: url('fonts/Heaters.woff2') format('woff2'),
+      url('fonts/Heaters.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('fonts/PermanentMarker-Regular.woff2') format('woff2'),
+      url('fonts/PermanentMarker-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura bold';
+  src: url('fonts/Futura_Medium.woff2') format('woff2'),
+      url('fonts/Futura_Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura book';
+  src: url('fonts/Futura-Book.woff2') format('woff2'),
+      url('fonts/Futura-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

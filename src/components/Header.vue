@@ -1,11 +1,25 @@
 <template>
   <header>
     <div class="header__container">
+      <!--
       <img class="burger__menu" src="../../public/img/burgermenu.svg" alt="">
-      <img class="logo" src="../../public/img/logo.svg" alt="">
+      -->
+      <input id="burger" class="burger__checkbox" type="checkbox" />
+      <label for="burger" class="burger__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="nav burger__nav">
+        <router-link to="/">Accueil</router-link>
+        <router-link to="/listing">Tous les articles</router-link>
+      </nav>
+      <router-link to="/" class="logo-container">
+        <img class="logo" src="../../public/img/logo.svg" alt="">
+      </router-link>
       <p class="language">FR | EN</p>
     </div>
-    <nav class="nav">
+    <nav class="nav desktop__nav">
       <router-link to="/">Accueil</router-link>
       <router-link to="/listing">Tous les articles</router-link>
     </nav>
@@ -25,17 +39,139 @@ body {
 
 header {
   background-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 20px;
 }
 
 .header__container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   color: white;
+  position: relative;
 }
 
-.nav {
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+
+.logo {
+  height: 35px;
+}
+
+.language {
+  font-size: 0.8rem;
+  transition: all .2s ease;
+}
+
+input {
+  opacity: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  z-index: 5;
+	opacity: 0;
+}
+
+.burger__menu {
+  height: 25px;
+  width: 30px;
+  position: relative;
+}
+
+.burger__menu span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 11px;
+  left: 0;
+  display: block;
+  background: #ffffff;
+  transition: all .2s ease;
+}
+
+.burger__menu span:first-child {
+  top: 0px;
+}
+
+.burger__menu span:last-child {
+  top: 21px;
+}
+
+input[type=checkbox]:checked + .burger__menu span {
+  opacity: 0;
+  top: 50%;
+}
+
+input[type=checkbox]:checked + .burger__menu span:first-child {
+  opacity: 1;
+	transform: rotate(45deg);
+}
+
+input[type=checkbox]:checked + .burger__menu span:last-child {
+  opacity: 1;
+	transform: rotate(-45deg);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  transition: all .2s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.burger__nav {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .2s ease;
+}
+
+.burger__nav a:first-child {
+  margin-right: 60px;
+}
+
+input[type=checkbox]:checked ~ .burger__nav {
+  opacity: 1;
+  pointer-events: all;
+}
+
+input[type=checkbox]:checked ~ .logo-container {
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type=checkbox]:checked ~ .language {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.desktop__nav {
   display: none;
 }
 
@@ -44,36 +180,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .header__container {
-    justify-content: flex-start;
-  }
-
-  .logo {
-    margin-left: 80px;
+    padding: 20px 80px;
   }
 
   .language {
-    margin-left: 15px;
-    width: 53px;
+    font-family: 'Futura book';
+    margin-left: 20px;
   }
 
   .burger__menu {
     display: none;
   }
 
+  .burger__nav {
+    display: none;
+  }
+
   .nav {
+    font-family: 'Futura book';
     display: block;
-    margin-right: 80px;
     color: white;
     padding: 0;
   }
 
-  .nav a {
-    color: white;
-    padding-left: 40px;
-    text-decoration: none;
+  .desktop__nav a {
+    margin-left: 40px;
   }
 }
 </style>
