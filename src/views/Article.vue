@@ -19,7 +19,7 @@
 export default {
   name: 'Article',
   created() {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${ this.$route.params.slug }`).then((response) => {
+    fetch(`https://tp-vuepwa.glitch.me/${ this.$route.params.slug }`).then((response) => {
       response.json().then((data) => {
         this.post = data
       })

@@ -6,8 +6,8 @@
         <article class="media">
           <figure>
             <img
-              v-if="post.image"
-              :src="post.image"
+              v-if="post.img"
+              :src="post.img"
               alt=""
             >
             <img
@@ -31,7 +31,8 @@
 export default {
   name: 'List',
   created() {
-    fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
+    // fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
+    fetch('https://tp-vuepwa.glitch.me/').then((response) => {
       response.json().then((data) => {
         this.posts = data
       })
