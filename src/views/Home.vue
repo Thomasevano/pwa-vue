@@ -122,7 +122,7 @@ export default {
     margin: 0px auto;
     
     padding: 20px;
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(242.63deg, #C6FFDD 0%, #FBD786 48.44%, #F7797D 100%);
+    background: #FFFFFF;
     border: 3px solid #000000;
     border-radius: 2px;
   }
