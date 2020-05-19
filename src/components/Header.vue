@@ -55,8 +55,9 @@ header {
   }
 
   .language {
+    font-family: 'Futura bold';
     margin-left: 15px;
-    width: 53px;
+    width: 60px;
   }
 
   .burger__menu {
@@ -64,6 +65,7 @@ header {
   }
 
   .nav {
+    font-family: 'Futura bold';
     display: block;
     margin-right: 80px;
     color: white;
