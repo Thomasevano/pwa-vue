@@ -3,9 +3,15 @@
     <div v-for="post in posts" :key="post.id" class="last-article">
       <figure>
         <img
-          src="http://via.placeholder.com/250x250"
-          alt=""
-        >
+              v-if="post.img"
+              :src="post.img"
+              alt=""
+            >
+            <img
+              v-else
+              src="http://via.placeholder.com/250x250"
+              alt=""
+            >
       </figure>
       <span>Jean claude</span>
       <span>Le 14/04/2020</span>

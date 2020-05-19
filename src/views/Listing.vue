@@ -31,10 +31,10 @@
 export default {
   name: 'List',
   created() {
-    // fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
     fetch('https://tp-vuepwa.glitch.me/').then((response) => {
       response.json().then((data) => {
         this.posts = data
+        console.log(data);
       })
     })
   },
