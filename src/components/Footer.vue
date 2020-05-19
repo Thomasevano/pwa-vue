@@ -34,6 +34,12 @@ export default {
   align-items: flex-start;
 }
 
+.newsletter h2 {
+  font-family: 'Heaters';
+  font-size: 42px;
+  color:black;
+}
+
 a {
   color: black;
   font-weight: bold;
@@ -72,6 +78,10 @@ a {
 @media(min-width: 1366px) {
   .newsletter {
     margin-left: 183px;
+  }
+
+  .newsletter h2 {
+    font-size: 82px;
   }
 }
 
