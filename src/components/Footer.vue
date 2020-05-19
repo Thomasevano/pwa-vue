@@ -32,12 +32,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: 'Futura bold';
 }
 
 .newsletter h2 {
-  font-family: 'Heaters';
   font-size: 42px;
   color:black;
+  font-weight: bold;
 }
 
 a {
@@ -46,6 +47,7 @@ a {
 }
 
 .footer {
+  font-family: 'Futura bold';
   margin-top: 32px;
   background-color: black;
   color:white;
@@ -81,7 +83,7 @@ a {
   }
 
   .newsletter h2 {
-    font-size: 82px;
+    font-size: 42px;
   }
 }
 
