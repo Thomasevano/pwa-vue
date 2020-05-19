@@ -1,6 +1,6 @@
 <template>
   <div>
-     <h1 v-if="isShow">{{ msg }}</h1>
+    <h1 v-if="isShow">{{ msg }}</h1>
     <h1 v-else>{{ msg }} !</h1>
     <h1>{{ bigMessage }}</h1>
     <h1 @click="toogleShow()">{{ isShow }}</h1>

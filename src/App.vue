@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/listing">Listing</router-link>
-    </div>
+    <Header></Header>
     <router-view/>
   </div>
 </template>
+
+<script>
+import Header from '@/components/Header.vue';
+
+export default {
+  components: {
+    Header,
+  }
+}
+</script>
 
 <style>
 #app {
@@ -17,16 +24,16 @@
   color: #2c3e50;
 }
 
-#nav {
+nav {
   padding: 30px;
 }
 
-#nav a {
+nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
+nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
