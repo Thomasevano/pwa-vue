@@ -1,8 +1,8 @@
 <template>
   <div v-if="post">
     <img  
-      v-if="article1_img"
-      :src="article1_img"
+      v-if="post.img"
+      :src="post.img"
       alt=""
     >
     <img

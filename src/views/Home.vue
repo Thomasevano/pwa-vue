@@ -1,19 +1,16 @@
 <template>
   <div class="home">
-    <div class="last-article">
-      <article class="media">
-        <figure>
-          <img
-            src="http://via.placeholder.com/250x250"
-            alt=""
-          >
-        </figure>
-        <h2>Air jordan</h2>
-        <p>Air jordan</p>
-      </article>
-      <div class="button">
-        <router-link :to="'article/' + post.id">Lire l'article</router-link>
-      </div>
+    <div v-for="post in posts" :key="post.id" class="last-article">
+      <figure>
+        <img
+          src="http://via.placeholder.com/250x250"
+          alt=""
+        >
+      </figure>
+      <span>Jean claude</span>
+      <span>Le 14/04/2020</span>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.description}}</p>
     </div>
   </div>
 </template>
@@ -23,5 +20,21 @@
 
 export default {
   name: 'Home',
+  created() {
+    fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
+      response.json().then((data) => {
+        this.posts = data
+      })
+    })
+  },
+  data() {
+    return {
+      posts: []
+    }
+  }
 }
 </script>
+
+<style scoped>
+
+</style>

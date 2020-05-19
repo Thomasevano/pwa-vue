@@ -61,7 +61,7 @@ li img {
   width: 50%;
 }
 .button {
-  width: 256px;
+  width: 156px;
   height: 40px;
   background: black;
 }
