@@ -1,16 +1,10 @@
 <template>
   <div v-if="post" class="post">
     <h1 class="article_title">{{ post.title }}</h1>
-    <img class="article_img" 
-      v-if="post.img"
-      :src="post.img"
-      alt=""
-    >
-    <img class="article_img"
-      v-else
-      src="http://via.placeholder.com/250x250"
-      alt=""
-    >
+
+    <img v-if="post.img" :src="post.img" alt="article image">
+    <img v-else src="http://via.placeholder.com/250x250" alt="article image">
+
     <div class="article_details">
       <span class="article_author">{{ post.author }}</span>
       <span class="article_date">{{ post.date }}</span>
@@ -23,36 +17,20 @@
 
     <a href="#" class="buy_button">Acheter</a>
 
-    <img class="article_img" 
-      v-if="post.img2"
-      :src="post.img2"
-      alt=""
-    >
-    <img class="article_img"
-      v-else
-      src="http://via.placeholder.com/250x250"
-      alt=""
-    >
-    <img class="article_img" 
-      v-if="post.img3"
-      :src="post.img3"
-      alt=""
-    >
-    <img class="article_img"
-      v-else
-      src="http://via.placeholder.com/250x250"
-      alt=""
-    >
-    <img class="article_img" 
-      v-if="post.img4"
-      :src="post.img4"
-      alt=""
-    >
-    <img class="article_img"
-      v-else
-      src="http://via.placeholder.com/250x250"
-      alt=""
-    >
+    <ul class="article_img">
+      <li>
+        <img v-if="post.img2" :src="post.img2" alt="article image">
+        <img v-else src="http://via.placeholder.com/250x250" alt="article image">
+      </li>
+      <li>
+        <img v-if="post.img3" :src="post.img3" alt="article image">
+        <img v-else src="http://via.placeholder.com/250x250" alt="article image">
+      </li>
+      <li>
+        <img v-if="post.img4" :src="post.img4" alt="article image">
+        <img v-else src="http://via.placeholder.com/250x250" alt="article image">
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -79,6 +57,9 @@ export default {
 * {
   font-family: 'Futura book';
 }
+li {
+  list-style: none;
+}
 
 .post {
   width: 375px;
@@ -92,10 +73,24 @@ export default {
   margin: 20px auto;
 }
 
-.article_img {
+img {
   width: 100%;
   height: 297px;
   margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* .article_img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+.article_img {
+  padding-left: 0;
+}
+.article_img li{
+  width: 100%;
 }
 
 .article_details {
@@ -146,9 +141,20 @@ export default {
     margin: 0 auto;
   }
   .article_img {
-    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .article_img li{
+    width: calc(100%/2 - 5px);
+  }
+  .article_img li:nth-last-child(1) {
+    width: 100%;
+  }
+  img {
+    width: 100%;
     height: 500px;
-    object-fit:cover;
   }
   .article_title {
     font-size: 42px;
