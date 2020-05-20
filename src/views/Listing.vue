@@ -17,7 +17,7 @@
               <h3 class="article-title">{{ post.title }}</h3>
             </div>
             <div class="article-description">
-              <p class="description-text">{{ posts[0].description}}</p>
+              <p class="description-text">{{ post.description}}</p>
               <div class="button">
                 <p>Lire l'article</p>
               </div>
