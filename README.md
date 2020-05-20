@@ -1,4 +1,4 @@
-# tp-pwa
+# NeoStreet
 
 ## Project setup
 ```
