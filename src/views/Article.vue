@@ -10,8 +10,7 @@
       <span class="article_date">{{ post.date }}</span>
     </div>
     
-    <p class="article_content">{{ post.body }}</p>
-    <p class="article_content">{{ post.body }}</p>
+    <p class="article_content intro">{{ post.description }}</p>
     <p class="article_content">{{ post.body }}</p>
     <p class="article_content">{{ post.body }}</p>
 
@@ -110,6 +109,9 @@ img {
   margin: 0 auto 20px;
   font-size: 14px;
   text-align: left;
+}
+.intro {
+  font-weight: bold;
 }
 .buy_button {
   display: inline-block;
