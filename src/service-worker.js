@@ -7,9 +7,9 @@ workbox.setConfig({
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {})
 
 workbox.routing.registerRoute(
-	new RegExp('https://jsonplaceholder.typicode.com/(.*)'),
+	new RegExp('https://tp-vuepwa.glitch.me/(.*)'),
 	new workbox.strategies.CacheFirst({
-		cacheName: 'jsonplaceholder',
+		cacheName: 'tp-pwa',
 		method: 'GET',
 		cacheableResponse: { statuses: [0, 200] },
 		plugins: [
