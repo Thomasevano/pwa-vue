@@ -1,5 +1,9 @@
 # NeoStreet
 
+Lien vers le site en ligne : [NeoStreet](https://neostreet.netlify.app/#/)
+
+Lien vers la custom API : [tp-vuepwa](https://glitch.com/~tp-vuepwa) (cliquer sur le bouton **VIEW SOURCE**)
+
 ## Project setup
 ```
 npm install
