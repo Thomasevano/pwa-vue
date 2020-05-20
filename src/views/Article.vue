@@ -57,6 +57,7 @@ export default {
 * {
   font-family: 'Futura book';
 }
+
 li {
   list-style: none;
 }
@@ -80,12 +81,6 @@ img {
   object-fit: cover;
 }
 
-/* .article_img {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
 .article_img {
   padding-left: 0;
 }
@@ -137,7 +132,8 @@ img {
 
 @media (min-width: 600px) {
   .post {
-    width: 1000px;
+    width: calc(100% - 10px);
+    max-width: 1000px;
     margin: 0 auto;
   }
   .article_img {
@@ -162,7 +158,8 @@ img {
   }
   .article_content {
     font-size: 18px;
-    width: 950px;
+    width: calc(100% - 50px);
+    max-width: 950px;
   }
 }
 </style>
